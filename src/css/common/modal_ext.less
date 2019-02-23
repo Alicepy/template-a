@@ -1,0 +1,158 @@
+.modal{
+    overflow-y: auto;
+}
+.modal-dialog {
+    width: 600px;
+    margin: 0 auto;
+    margin-top: 50px;
+    position: relative;
+    z-index: 9999;
+    &.modal-loading{
+        .modal-content{
+            .tip-icon {
+                width: 32px!important;
+                height: 32px!important;
+                img{
+                    width:100%;
+                    height:100%;
+                }
+            }
+            padding:0;
+        }
+    }
+    &.modal-show{
+        .modal-content{
+            height: 100%;
+            width: 100%;
+            padding: 40px 0 0 0;
+            position: relative;
+            box-sizing: border-box;
+            .modal-wrap{
+                height: 100%;
+                width: 100%;
+                .show-content{
+                    height: 100%;
+                    width: 100%;
+                }
+            }
+        }
+    }
+    .modal-content{
+        height: 100%;
+        width: 100%;
+        padding: 40px 0 50px 0;
+        position: relative;
+        .modal-header {
+            background: #5090D8;
+            height: 40px;
+            line-height: 40px;
+            border-radius: 5px 5px 0 0;
+            box-sizing: border-box;
+            padding: 0;
+            padding-right: 30px;
+            position: absolute;
+            top: 0;
+            width: 100%;
+            .modal-title {
+                width: 100%;
+                height: 100%;
+                line-height: 40px;
+                padding-left: 10px;
+                color: #fff;
+                letter-spacing: 1px;
+                position: absolute;
+            }
+            .modal-close {
+                width: 30px;
+                height: 40px;
+                position: absolute;
+                right: 0;
+                cursor: pointer;
+                color: #fff;
+                text-align: center;
+            }
+        }
+        .modal-body {
+            padding: 15px;
+            overflow: auto;
+            width: 100%;
+            height: 100%;
+            &.modal-tip {
+                color: #333;
+                font-weight: 700;
+                text-align: center;
+                .tip-icon {
+                    width: 52px;
+                    height: 52px;
+                    display: inline-block;
+                    vertical-align: middle;
+                }
+                .tip-content {
+                    display: inline-block;
+                    vertical-align: middle;
+                    margin-left: 15px;
+                }
+                .normal {
+                    width: 0;
+                    height: 0;
+                }
+                .warning {
+                    background: url(../../images/common/modal_ext/tip_warning.png);
+                }
+                .success {
+                    background: url(../../images/common/modal_ext/tip_success.png);
+                }
+                .error {
+                    background: url(../../images/common/modal_ext/tip_error.png);
+                }
+            }
+        }
+        .modal-footer {
+            position: absolute;
+            text-align: center;
+            padding: 12px 0;
+            margin-top: 0;
+            border-top: solid 1px #eee;
+            background-color: #FFFFFF;
+            bottom: 0;
+            height: 50px;
+            width: 100%;
+            button {
+                padding: 0 15px;
+                min-width: 75px;
+                position: relative;
+                margin-left: 10px;
+                line-height: 28px;
+                border: none;
+                border-radius: 3px;
+                color: #fff;
+                &.cancel {
+                    background: #D2D2D2;
+                }
+                &.comfirm {
+                    background: #50ACF2;
+                }
+            }
+        }
+    }
+}
+.modal-lg {
+    width: 900px;
+}
+.modal-sm {
+    width: 300px;
+    top: -90px;
+    margin-top: 25%;
+    left: 50% ;
+    margin-left: -150px;
+}
+.modal-sm-ext{
+    width: 300px;
+    top: -90px;
+    margin-top: 25%;
+    left: 50%;
+    margin-left: -150px;
+    .modal-content{
+        padding-bottom: 10px;
+    }
+}

@@ -1,0 +1,52 @@
+// color
+@button-color-level-10: #dff2ff;
+@button-color-level-20: #80cbff;
+@button-color-level-30: #0394F9;
+@button-color-level-40: #225BA7;
+@button-color-level-50: #1C3F6E;
+// font
+@font-middle-size: 18px;
+
+// button
+.shallowBlue {
+    color: @button-color-level-30;
+    background: #ffffff;
+    border: 1px solid @button-color-level-30;
+}
+.shallowBlue .active {
+    color: #ffffff;
+    background: @button-color-level-30;
+}
+.shallowBlue:hover {
+    color: @button-color-level-30;
+    border-color: @button-color-level-20;
+    background: @button-color-level-10;
+}
+
+
+.deepLinearBlue {
+    color: #ffffff;
+    // IE8~9
+    filter:progid:DXImageTransform.Microsoft.gradient(startColorstr =@button-color-level-40,endColorstr =@button-color-level-50,GradientType = 0);
+    // IE10+
+    background: linear-gradient(to bottom, @button-color-level-40, @button-color-level-50);
+    // old gradient for webkit
+    background: -webkit-gradient(linear, top, bottom, from(@button-color-level-40), to(@button-color-level-50));
+    // new gradient for webkit
+    background: -webkit-linear-gradient(bottom, @button-color-level-40, @button-color-level-50);
+    // Opera11
+    background: -o-linear-gradient(bottom, @button-color-level-40, @button-color-level-50);
+    // Mozilla
+    background: -moz-linear-gradient(bottom, @button-color-level-40, @button-color-level-50);
+
+    font-size: @font-middle-size;
+}
+
+// tab
+
+
+// input
+.middleInput{
+    padding-left: 0.8em;
+    font-size: @font-middle-size;
+}

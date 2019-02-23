@@ -1,0 +1,56 @@
+.public-hw{
+    width:100%;
+    height:100%;
+}
+.module-wrap{
+    .public-hw;
+    box-sizing: border-box;
+    position: relative;
+    padding-top: 35px;
+    border-radius: 5px;
+    .module-header{
+        border-radius: 5px 5px 0 0;
+        position: absolute;
+        top:0;
+        height: 35px;
+        width:100%;
+        background: #FAFAFA;
+        border-bottom: solid 1px #cee0f0;
+        line-height:35px;
+        padding:0 15px;
+        box-sizing: border-box;
+        .header-left{
+            display: inline-block;
+            .icon{
+                display: inline-block;
+                height: 17px;
+                vertical-align: middle;
+            }
+            .header-title{
+                color: #1290E6;
+                margin-left: 5px;
+            }
+        }
+        .header-right{
+            float:right;
+            button{
+                margin:0 3px;
+                padding: 4px 8px;
+                font-size: 13px;
+                font-weight: 400;
+            }
+            span{
+                color: #1290E6;
+                cursor: pointer;
+                i{
+                    margin-right:5px;
+                }
+            }
+        }
+
+    }
+    .module-container{
+        .public-hw;
+        overflow: auto;
+    }
+}

@@ -1,0 +1,48 @@
+.public-hw {
+  width: 100%;
+  height: 100%;
+}
+.module-container {
+  /* padding:15px; */
+  padding: 10px;
+  box-sizing: border-box;
+}
+.module-container .main-container {
+  width: 100%;
+  height: 100%;
+}
+.module-container .wrap-container-right {
+  position: relative;
+  padding-top: 35px;
+  width: 100%;
+  height: 100%;
+}
+.module-container .wrap-compulsory {
+  padding-top: 67px!important;
+}
+.module-container .compulsory-search {
+  top: 32px!important;
+}
+.module-container .rowLists {
+  position: absolute;
+  top: 0px;
+  width: 100%;
+  height: 40px;
+  min-width: 1024px;
+}
+.module-container .rowLists .rowLine {
+  margin: 0 auto;
+  margin-bottom: 10px;
+  padding-left: 10px;
+  height: 25px;
+}
+.module-container .tableLists {
+  width: 100%;
+  height: 100%;
+}
+.module-container .no-gene-file {
+  padding-top: 155px!important;
+}
+.module-container .no-gene-row {
+  top: 70px!important;
+}

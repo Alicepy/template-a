@@ -1,0 +1,31 @@
+.usb-play-container .usb-row {
+  padding: 5px 0;
+}
+.usb-play-container .usb-row .row-title {
+  float: left;
+  padding: 0 5px;
+}
+.usb-play-container .usb-row .row-content {
+  float: left;
+}
+.usb-play-container .usb-row .row-left {
+  background: #ddd;
+  width: 332px;
+  height: 250px;
+  float: left;
+}
+.usb-play-container .usb-row .row-left img {
+  width: 100%;
+  height: 100%;
+}
+.usb-play-container .usb-row .row-right {
+  background: #ddd;
+  width: 332px;
+  height: 250px;
+  float: right;
+}
+.usb-play-container .usb-row:after {
+  content: "";
+  display: block;
+  clear: both;
+}

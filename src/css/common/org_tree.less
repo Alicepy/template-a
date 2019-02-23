@@ -1,0 +1,39 @@
+.ztree{
+    li{
+        span{
+            margin-left: 3px;
+            line-height: 20px;
+            &.ico_close,&.ico_open{
+                background-position:0!important;
+                background-image:url(../../images/org_tree/org_icon.png);
+            }
+            &.ico_docu{
+                display: none;
+            }
+            &.root_open,&.roots_open,.center_open,&.center_open,&.bottom_open{
+                background-image:url(../../images/org_tree/node_open.png);
+                background-position: 3px 10px!important;
+                margin-right: 5px;
+            }
+            &.root_close,&.roots_close,&.center_close,&.bottom_close{
+                background-image:url(../../images/org_tree/node_close.png);
+                background-position: 3px 5px!important;
+                margin-right: 5px;
+            }
+            &.ico_close,&.ico_open{
+                margin-top:3px;
+            }
+        }
+        a{
+            height: 25px;
+            color: #666;
+            padding: 3px 3px 0 0;
+            &.curSelectedNode{
+                height: 25px;
+                line-height: 25px;
+                background-color: #b0c1ff;
+                border: 1px #51a7ff solid;
+            }
+        }
+    }
+}

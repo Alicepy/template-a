@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>DragSort Example</title>
+	<meta charset="utf-8" />
+	<style type="text/css">
+
+		ul { margin:0px; padding:0px; margin-left:20px; }
+		#list1{ width:350px; list-style-type:none; margin:0px; }
+		#list1 li{ float:left; padding:5px; width:100px; height:100px; }
+		
+	</style>
+</head>
+<body>
+	<script type="text/javascript" src="http://code.jquery.com/jquery-1.11.1.min.js"></script>
+	<script type="text/javascript" src="jquery.dragsort-0.5.2.min.js"></script>		
+
+	<ul id="list1">
+		<li><div>1</div></li>
+		<li><div>2</div></li>
+		<li><div>3</div></li>
+		<li><div>4</div></li>
+		<li><div>5</div></li>
+		<li><div>6</div></li>
+		<li><div>7</div></li>
+		<li><div>8</div></li>
+		<li><div>9</div></li>
+		<li><div>10</div></li>
+	</ul>
+	
+	<!-- save sort order here which can be retrieved on server on postback -->
+	<input name="list1SortOrder" type="hidden" />
+
+	<script type="text/javascript">
+		$("#list1").dragsort({ dragSelector: "div", dragBetween: false, dragEnd: saveOrder, placeHolderTemplate: "<li class='placeHolder'><div></div></li>" });
+		
+		function saveOrder() {
+			var data = $("#list1 li").map(function() { return $(this).children().html(); }).get();
+			$("input[name=list1SortOrder]").val(data.join("|"));
+		};
+	</script>
+
+	<div style="clear:both;"></div>
+</body>
+</html>

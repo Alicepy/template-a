@@ -1,0 +1,24 @@
+.valid-error{
+    border-color: #ea908e;
+    -webkit-box-shadow: 0 0 6px #f8b9b7;
+    -moz-box-shadow: 0 0 6px #f8b9b7;
+    box-shadow: 0 0 6px #f8b9b7;
+    background: #f9dcdc;
+}
+form.ng-dirty{
+    input.ng-invalid.ng-invalid-required{
+        .valid-error;
+    }
+    input.ng-invalid.ng-invalid-email{
+        .valid-error;
+    }
+    input.ng-invalid.ng-invalid-pattern{
+        .valid-error;
+    }
+    input.ng-invalid.ng-invalid-minlength{
+        .valid-error;
+    }
+    input.ng-invalid.ng-invalid-maxlength{
+        .valid-error;
+    }
+}

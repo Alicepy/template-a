@@ -1,0 +1,51 @@
+.tree_table .default_node, .tree_table .default_active_node {width:20px;height:25px;border: medium none; margin: 0; padding: 0;display: inline-block; vertical-align:middle}
+.tree_table .default_active_node {cursor: pointer;}
+.tree_table .default_leaf{background:url(./allbgs.png) no-repeat -20px center;width:20px;}
+.tree_table .default_last_leaf{background:url(./allbgs.png) no-repeat -80px center;width:20px;}
+.tree_table .default_vertline{background:url(./allbgs.png) no-repeat -40px center;width:20px;}
+.tree_table .default_open, .tree_table .default_hover_open{background:url(./allbgs.png) no-repeat 0px center;width:20px;}
+.tree_table .default_shut, .tree_table .default_hover_shut{background:url(./allbgs.png) no-repeat -60px center;width:20px;}
+.tree_table .default_last_shut, .tree_table .default_hover_last_shut{background:url(./allbgs.png) no-repeat -120px center;width:20px;}
+.tree_table .default_last_open, .tree_table .default_hover_last_open{background:url(./allbgs.png) no-repeat -140px center;width:20px;}
+
+
+.tree_table thead tr{
+	background:url(../../../../styles/images/common/bg_table_title.png) repeat-x;
+}
+.tree_table{background:#fff;}
+.tree_table th { color: #0081e9; border-color: #223c5c; }
+.tree_table th { background-color: #1e3756; color: #0180eb;
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #1e3756), color-stop(100%, #152a47));
+    /* Chrome,Safari4+ */
+    background: -webkit-linear-gradient(top, #1e3756 0%, #152a47 100%);
+    /* Chrome10+,Safari5.1+ */
+    background: -moz-linear-gradient(top, #1e3756 0%, #152a47 100%);
+    /* FF3.6+ */
+    background: -ms-linear-gradient(top, #1e3756 0%, #152a47 100%);
+    /* IE10+ */
+    background: -o-linear-gradient(top, #1e3756 0%, #152a47 100%);
+    /* Opera 11.10+ */
+    background: linear-gradient(to bottom, #1e3756 0%, #152a47 100%);
+    /* W3C */
+    /*box-shadow: 1px 1px 0 #091a2e,-1px -1px 0 #091a2e;*/ /*inset 0 0 3px #111;*/
+}
+
+	.tree_table td { color: #bbddf8; border-color: #223c5c; background-color: #172f4b; }
+	.tree_table tr:first-child > td{/*padding:5px 18px;*/background-color:#112746;}
+	.btn-default2 { color: #7a95b0; background-color: transparent; background-image: none; border: none; }
+	.box-border { background: #1e3756; border: 1px solid #c9e0f2; clear: both; margin-top: 0px; border-radius: 2px; }
+	.tree_table{}
+    .tree_table td {border:none;}
+
+    .tree_table > thead > tr > th{padding:4px 5px;border-bottom-width:1px;color:#0081e7;}
+    .tree_table > thead > tr > th, .tree_table > tbody > tr > th, .tree_table > tfoot > tr > th, .tree_table > thead > tr > td,
+    .tree_table > tbody > tr > td, .tree_table > tfoot > tr > td
+    {height:25px;overflow:hidden;line-height:0;vertical-align: middle;/*border:none;*/border: 1px solid #223c5d;}
+    .tree_table > tbody > tr > td{background-color:#1a3150;color:#bfdefa;;padding:0 5px}
+    .tree_table > tbody > tr:nth-child(odd) > td{background-color:#1a3150;}
+    .tree_table > tbody > tr:nth-child(even) > td{background-color:#172f4b;}
+
+    .tree_table > tbody > tr > td.first,.tree_table > thead > tr > th.first{padding-left:15px;padding-right:15px;}
+
+    /*高亮显示*/
+    .tree_table > tbody > tr:hover > td{background-color:#27405f; }

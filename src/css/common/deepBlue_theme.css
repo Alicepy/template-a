@@ -1,0 +1,28 @@
+.shallowBlue {
+  color: #0394F9;
+  background: #ffffff;
+  border: 1px solid #0394F9;
+}
+.shallowBlue .active {
+  color: #ffffff;
+  background: #0394F9;
+}
+.shallowBlue:hover {
+  color: #0394F9;
+  border-color: #80cbff;
+  background: #dff2ff;
+}
+.deepLinearBlue {
+  color: #ffffff;
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr=#225BA7, endColorstr=#1C3F6E, GradientType=0);
+  background: linear-gradient(to bottom, #225BA7, #1C3F6E);
+  background: -webkit-gradient(linear, top, bottom, from(#225BA7), to(#1C3F6E));
+  background: -webkit-linear-gradient(bottom, #225BA7, #1C3F6E);
+  background: -o-linear-gradient(bottom, #225BA7, #1C3F6E);
+  background: -moz-linear-gradient(bottom, #225BA7, #1C3F6E);
+  font-size: 18px;
+}
+.middleInput {
+  padding-left: 0.8em;
+  font-size: 18px;
+}

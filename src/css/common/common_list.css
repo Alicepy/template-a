@@ -1,0 +1,25 @@
+.common-list {
+  position: absolute;
+  width: 180px;
+  text-align: center;
+  border-radius: 5px;
+  border: solid 1px #ddd;
+  border-bottom: none;
+  z-index: 999999;
+}
+.common-list ul {
+  list-style-type: none;
+  width: 100%;
+}
+.common-list ul li {
+  height: 35px;
+  line-height: 35px;
+  background: #F3F2F1;
+  color: #666;
+  border-bottom: solid 1px #ddd;
+  font-weight: 700;
+  cursor: pointer;
+}
+.common-list ul li:hover {
+  background: #E6E4E1;
+}
