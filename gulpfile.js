@@ -1,11 +1,8 @@
 // 依赖
-var gulp = require('gulp');
+const gulp = require('gulp');
 // 进行实例化(gulp-load-plugins这个模块后面可以通过$来操作)
-var $ = require('gulp-load-plugins')();
-var ngHtml2js = require('gulp-ng-html2js');
-
-// open模块
-var open = require('open');
+const $ = require('gulp-load-plugins')();
+const ngHtml2js = require('gulp-ng-html2js');
 
 var app = {
     srcPath: 'src/',   //源代码路径
@@ -49,7 +46,7 @@ gulp.task('html', function () {
 */
 var jsList = [
     './src/app/home/*.js',
-    './tmp/templates/*.js',
+    './tmp/templates/*.js'
   ];
 
 //  gulp.task('templatesTpls', function () {

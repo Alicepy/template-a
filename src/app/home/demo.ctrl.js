@@ -3,10 +3,10 @@
  * @Author: zhangxuelian 
  * @Date: 2018-01-02 14:08:09 
  * @Last Modified by: chenpeiyu
- * @Last Modified time: 2019-02-23 17:28:59
+ * @Last Modified time: 2019-03-01 17:56:46
  **/
 define(['app/common/app'], function (app) {
-    app.registerController('demoCtrl', function ($scope, $modal, $couchPotato, Models, modalExt, $rootScope, $location, $state, $sce, subject, $log, $timeout, normalUtil, dateUtil, $scope, normalUtil, security,commonUtil) {
+    app.registerController('demoCtrl', function ($scope, $modal, $couchPotato, modalExt, $rootScope, $location, $state, $sce, subject, $log, $timeout, normalUtil, dateUtil, $scope, normalUtil, security,commonUtil) {
         var tableObj = $scope.tableObj = {
             //设置表格
             tableConfig: {

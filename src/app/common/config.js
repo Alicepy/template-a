@@ -3,7 +3,7 @@
  * @Author: zhangxuelian
  * @Date: 2017-09-13 11:14:46
  * @Last Modified by: chenpeiyu
- * @Last Modified time: 2019-03-01 15:34:19
+ * @Last Modified time: 2019-03-01 17:56:25
  **/
 require.config({
     baseUrl: "",
@@ -141,9 +141,6 @@ require.config({
 	},{
 		name : 'common',
 		location : 'bower_components/common'
-	},{
-		name : 'models',
-		location : 'bower_components/common/models'
 	},{
 		name : 'services',
 		location : 'bower_components/common/services'
