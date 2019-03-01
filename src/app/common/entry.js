@@ -3,7 +3,7 @@
  * @Author: zhangxuelian 
  * @Date: 2017-09-14 09:32:34 
  * @Last Modified by: chenpeiyu
- * @Last Modified time: 2019-02-23 17:41:57
+ * @Last Modified time: 2019-03-01 15:34:49
  **/
 require(['angular'], function () {
     require([
@@ -15,29 +15,29 @@ require(['angular'], function () {
 
         'app/common/constants',
 
-        'models/models',
+        'bower_components/common/models/models',
         
-        'common/security/index',
-        'common/exception/index',
+        'bower_components/common/security/index',
+        'bower_components/common/exception/index',
 
-        'services/date_util',
-        'services/normal_util',
-        'services/modal_ext',
-        'services/common_util',
+        'bower_components/common/services/date_util',
+        'bower_components/common/services/normal_util',
+        'bower_components/common/services/modal_ext',
+        'bower_components/common/services/common_util',
         
-        'services/ui-bootstrap-locale_zh-cn',
+        'bower_components/common/services/ui-bootstrap-locale_zh-cn',
 
-        'directives/common_table',
-        'directives/common_table_add',
-        'directives/common_select',
-        'directives/common_select_ext',
-        'directives/simple_panigation',
-        'directives/common_list',
-        'directives/common-ratio-tool',
-        'directives/repeat_finish',
-        'directives/accordion_menu',
+        'bower_components/common/directives/common_table',
+        'bower_components/common/directives/common_table_add',
+        'bower_components/common/directives/common_select',
+        'bower_components/common/directives/common_select_ext',
+        'bower_components/common/directives/simple_panigation',
+        'bower_components/common/directives/common_list',
+        'bower_components/common/directives/common-ratio-tool',
+        'bower_components/common/directives/repeat_finish',
+        'bower_components/common/directives/accordion_menu',
 
-        'filters/filters'
+        'bower_components/common/filters/filters'
 
     ], function () {
         require(['app/common/app', 'angular', 'angular-couch-potato','layer'], function (app, angular, couchPotato) {

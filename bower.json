@@ -1,0 +1,21 @@
+{
+  "name": "template-a",
+  "description": "{{description}}",
+  "main": "index.js",
+  "authors": [
+    "{{author}}"
+  ],
+  "license": "ISC",
+  "homepage": "https://github.com/Alicepy/template-a",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "lib": "*",
+    "common": "*"
+  }
+}

@@ -1,0 +1,12 @@
+{
+  "directory": "src/bower_components",
+    "nexus" : { 
+      "username" : "admin", 
+      "password" : "zxltest" 
+    },
+    "registry" : {
+      "search" : [ "http://192.168.37.99:8081/repository/bower-all/"],
+      "register" : "http://admin:zxltest@192.168.37.99:8081/repository/bower-hosted/"
+    },
+    "resolvers" : [ "bower-nexus3-resolver" ]
+}
