@@ -35,6 +35,10 @@ gulp.task('vendor',function () {
     return gulp.src('src/images/**/*')
       .pipe(gulp.dest(app.prdPath+'images'))
   });
+  gulp.task('router',function () {
+    return gulp.src('src/app/router/*.js')
+      .pipe(gulp.dest(app.prdPath+'app/router'))
+  });
 
 /*
 *  html任务
@@ -51,7 +55,7 @@ gulp.task('html2', function () {
 *  在src目录下创建script文件夹，里面存放所有的js文件
 */
 var jsList = [
-    'src/app/home/**/*.js',
+    'src/app/demo/**/*.js',
     'src/app/common/**/*.js'
   ];
 // jshint检验
@@ -82,15 +86,14 @@ gulp.task('jshint', function () {
 //   });
 
 gulp.task('js', function () {
-    return gulp.src('src/app/home/**/*')
-    .pipe(gulp.dest(app.prdPath+'app/home'))
+    return gulp.src('src/app/demo/**/*')
+    .pipe(gulp.dest(app.prdPath+'app/demo'))
   });
 
   gulp.task('jscommon', function () {
     return gulp.src('src/app/common/**/*')
     // .pipe($.uglify())
     .pipe(gulp.dest(app.prdPath+'app/common'))
-    // .pipe($.connect.reload());
   });
 
 /*
@@ -102,7 +105,6 @@ gulp.task('css',function () {
     .pipe($.cssmin())
     .pipe($.concat('all.css'))
     .pipe(gulp.dest(app.prdPath + 'css'))
-    // .pipe($.connect.reload());
 });
 gulp.task('cssInject',function(){
     gulp.src('./dist/index.html')
@@ -144,6 +146,6 @@ gulp.task('default', ['clean'], function () {
 });
 
   // 总任务
-gulp.task('build', [ 'html','html2','css','lib','common','js','jscommon','vendor','images','demo_watch' ],function(){
+gulp.task('build', [ 'html','html2','css','lib','common','router','js','jscommon','vendor','images','demo_watch' ],function(){
     gulp.start('cssInject');
 });

@@ -3,7 +3,7 @@
  * @Author: zhangxuelian
  * @Date: 2017-09-13 14:37:45
  * @Last Modified by: chenpeiyu
- * @Last Modified time: 2019-03-04 14:35:08
+ * @Last Modified time: 2019-03-05 14:29:54
  **/
 define(['app/common/app'], function(app) {
     angular.module("home", ['ui.router'])
@@ -14,12 +14,12 @@ define(['app/common/app'], function(app) {
          */
         .state('home.demo', {
             url: "/demo",
-            templateUrl: 'app/home/demo.html',
+            templateUrl: 'app/demo/demo.html',
             controller: 'demoCtrl',
             noanimation: true,
             cache: true,
             resolve: {
-                dummy: $couchPotatoProvider.resolveDependencies(['app/home/demo.ctrl.js'])
+                dummy: $couchPotatoProvider.resolveDependencies(['app/demo/demo.ctrl.js'])
             }
         })
     });

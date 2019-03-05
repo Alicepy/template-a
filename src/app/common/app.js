@@ -3,10 +3,10 @@
  * @Author: zhangxuelian 
  * @Date: 2017-09-13 11:11:28 
  * @Last Modified by: chenpeiyu
- * @Last Modified time: 2019-03-04 14:28:36
+ * @Last Modified time: 2019-03-05 14:38:12
  **/
 define([
-	'app/home/home.router',
+	'app/router/router',
 	], function () {
   	var app = angular.module('app', [ 
 		'home',
@@ -24,10 +24,10 @@ define([
 		function ($stateProvider, $urlRouterProvider, $locationProvider, angularShiroConfigProvider,$couchPotatoProvider) {
 			$stateProvider.state('home', {
 				url: "/home",
-				templateUrl: 'app/home/demo.html',
+				templateUrl: 'app/demo/demo.html',
 				controller: 'demoCtrl',
 				resolve: {
-					dummy: $couchPotatoProvider.resolveDependencies(['app/home/demo.ctrl.js'])
+					dummy: $couchPotatoProvider.resolveDependencies(['app/demo/demo.ctrl.js'])
 				}
 			})
 		}]);
