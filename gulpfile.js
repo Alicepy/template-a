@@ -31,6 +31,11 @@ gulp.task('vendor',function () {
       .pipe(gulp.dest(app.prdPath+'common'))
   });
 
+  gulp.task('images',function () {
+    return gulp.src('src/images/**/*')
+      .pipe(gulp.dest(app.prdPath+'images'))
+  });
+
 /*
 *  html任务
 *  创建目录src，在src下创建index.html
@@ -88,7 +93,6 @@ gulp.task('js', function () {
     // .pipe($.connect.reload());
   });
 
-
 /*
 *  css任务
 *   
@@ -107,14 +111,10 @@ gulp.task('cssInject',function(){
     .pipe(gulp.dest('dist'));
 })
 
-
-// gulp.task('html', ['copyTemplatesToDist', 'copyTplsToDist'], function () {
 gulp.task('html', function () {
     return gulp.src(['src/index.html'])
       .pipe(gulp.dest(app.prdPath))
   })
-// 总任务
-gulp.task('build', [ 'css','lib','common','html','js','jscommon','vendor','demo_watch' ,'html2','cssInject']);
 
 // 服务
 gulp.task('serve',function () {
@@ -138,8 +138,12 @@ gulp.task('demo_watch', function() {
 //  gulp.watch(app.srcPath + 'image/**/*', ['image']);
 })
 
-
 // 定义default任务
 gulp.task('default', ['clean'], function () {
     gulp.start('build');
-  });
+});
+
+  // 总任务
+gulp.task('build', [ 'html','html2','css','lib','common','js','jscommon','vendor','images','demo_watch' ],function(){
+    gulp.start('cssInject');
+});
