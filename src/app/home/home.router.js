@@ -3,10 +3,10 @@
  * @Author: zhangxuelian
  * @Date: 2017-09-13 14:37:45
  * @Last Modified by: chenpeiyu
- * @Last Modified time: 2019-03-01 18:57:21
+ * @Last Modified time: 2019-03-04 14:35:08
  **/
 define(['app/common/app'], function(app) {
-    angular.module("home", ['security.service'])
+    angular.module("home", ['ui.router'])
     .config(function($stateProvider, $urlRouterProvider, $couchPotatoProvider) {
         $stateProvider
         /**

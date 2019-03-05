@@ -3,7 +3,7 @@
  * @Author: zhangxuelian 
  * @Date: 2017-09-14 09:32:34 
  * @Last Modified by: chenpeiyu
- * @Last Modified time: 2019-03-01 18:54:15
+ * @Last Modified time: 2019-03-04 14:42:13
  **/
 require(['angular'], function () {
     require([
@@ -60,8 +60,8 @@ require(['angular'], function () {
                 $httpProvider.defaults.headers.common['X-Requested-With'] = 'XMLHttpRequest';
             });
             main.run([
-                '$couchPotato', '$state', '$stateParams', '$rootScope','security', 'securityAuthorization',
-                function ($couchPotato, $state, $stateParams, $rootScope,security,securityAuthorization) {
+                '$couchPotato', '$state', '$stateParams', '$rootScope',
+                function ($couchPotato, $state, $stateParams, $rootScope) {
                     
                     app.lazy = $couchPotato;
 

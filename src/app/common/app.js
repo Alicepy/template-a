@@ -3,7 +3,7 @@
  * @Author: zhangxuelian 
  * @Date: 2017-09-13 11:11:28 
  * @Last Modified by: chenpeiyu
- * @Last Modified time: 2019-02-27 20:32:27
+ * @Last Modified time: 2019-03-04 14:28:36
  **/
 define([
 	'app/home/home.router',
@@ -22,19 +22,6 @@ define([
 		'angularShiroConfigProvider', 
 		'$couchPotatoProvider',
 		function ($stateProvider, $urlRouterProvider, $locationProvider, angularShiroConfigProvider,$couchPotatoProvider) {
-			//$locationProvider.html5Mode(true);
-			var href = window.location.href;
-			// angularShiroConfigProvider.options.urls['/**'] = 'authc';
-			// angularShiroConfigProvider.options.urls['/login','/other/**','/pseudo_login/**','/home/case_work'] = 'anon';
-
-			// $stateProvider.state('home', {
-			// 	url: "/home",
-			// 	templateUrl: 'app/home/home_tradition_black.tpl.html',
-			// 	controller: 'homeCtrl',
-			// 	resolve: {
-			// 		dummy: $couchPotatoProvider.resolveDependencies(['app/home/home_tradition_black.ctrl.js'])
-			// 	}
-			// })
 			$stateProvider.state('home', {
 				url: "/home",
 				templateUrl: 'app/home/demo.html',

@@ -3,13 +3,40 @@
  * @Author: zhangxuelian 
  * @Date: 2018-01-02 14:08:09 
  * @Last Modified by: chenpeiyu
- * @Last Modified time: 2019-03-01 17:56:46
+ * @Last Modified time: 2019-03-04 15:25:31
  **/
 define(['app/common/app'], function (app) {
-    app.registerController('demoCtrl', function ($scope, $modal, $couchPotato, modalExt, $rootScope, $location, $state, $sce, subject, $log, $timeout, normalUtil, dateUtil, $scope, normalUtil, security,commonUtil) {
+    app.registerController('demoCtrl', function ($scope, $modal, $couchPotato, Models,modalExt, $rootScope, $location, $state, $sce, subject, $log, $timeout, dateUtil, normalUtil,commonUtil) {
+        
+        var baseConfig=$scope.baseConfig ={
+            init:function(){
+                this.getTableData();
+            },
+            params : {
+                data: {
+                    centerCode:subject.currentCenterCode,
+                    centerMagicId:subject.currentCaseCenter
+                },
+                page: {
+                    page: "1",
+                    size: "10"
+                },
+                timeQuery: {
+                    endTime: "",
+                    startTime: "",
+                    timeColumn: ""
+                }
+            },
+            getTableData:function(){
+                Models.all('interrogate/notification/list').post(baseConfig.params).then(function (ret) {
+                  tableObj.tableConfig.rows = ret.data;
+                });
+            }
+        };
         var tableObj = $scope.tableObj = {
             //设置表格
             tableConfig: {
+                // showIndex : true,//显示序号
                 rows:[{
                         'name':'test2',
                         'file':'192.168.12212',
@@ -44,7 +71,7 @@ define(['app/common/app'], function (app) {
                                         type:'warning',
                                         content: "确定要删除吗？",
                                         comfirmCallback: function () {
-                                          console.log('删除了')
+                                          console.log('删除了');
                                         }
                                     });
                                 }
@@ -89,5 +116,6 @@ define(['app/common/app'], function (app) {
                 }
             }
         };
+        baseConfig.init();
     });
 });

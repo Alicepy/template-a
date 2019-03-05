@@ -25,27 +25,13 @@
     <link rel="stylesheet" href="bower_components/common/directives/css/directives.css" />
     <link rel="stylesheet" href="bower_components/common/directives/css/accordion_menu.css" />
     <link rel="stylesheet" href="css/common/common_list.css" />
-
-    <link rel="stylesheet" href="bower_components/lib/videojs/video-js.min.css">
-    <script src="bower_components/lib/videojs/video.js"></script>
-    <script src="bower_components/lib/videojs/videojs-flash.min.js"></script>
-
     <script src="bower_components/lib/requirejs/require.js"></script>
     <script>
         var config = 'app/common/config.js?v='+Math.random();
         require([config], function () {
             require(['app/common/entry']);
         });  
-        var endScannerOcx = function(){};
-        var errorScannerOcx = function(){};
     </script>
-    <script language="javascript" FOR="scannerOcx" EVENT="EventScanEnd(path)">
-        endScannerOcx(path);
-    </script>
-    <script language="javascript" FOR="scannerOcx" EVENT="EventScanError(path)">
-        errorScannerOcx(path);
-    </script>
-    
 </head>
 <body>
     <div style="width:100%;height:100%" ui-view>

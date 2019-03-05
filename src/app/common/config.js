@@ -3,7 +3,7 @@
  * @Author: zhangxuelian
  * @Date: 2017-09-13 11:14:46
  * @Last Modified by: chenpeiyu
- * @Last Modified time: 2019-03-01 17:56:25
+ * @Last Modified time: 2019-03-04 20:06:55
  **/
 require.config({
     baseUrl: "",
@@ -153,12 +153,6 @@ require.config({
 	},{
         name : 'lib',
         location : 'bower_components/lib'
-    // }, {
-    //     name: 'appraisal',
-    //     location: 'app/case_manage/appraisal_check_manage/common/directives'
-    // },{
-    //     name: 'appraisal_services',
-    //     location: 'app/case_manage/appraisal_check_manage/common/services'
     }]
 });
 
@@ -169,15 +163,11 @@ if (!Array.prototype.indexOf)
     {
     var len = this.length >>> 0;
     var from = Number(arguments[1]) || 0;
-    from = (from < 0)
-            ? Math.ceil(from)
-            : Math.floor(from);
+    from = (from < 0) ? Math.ceil(from) : Math.floor(from);
     if (from < 0)
         from += len;
-    for (; from < len; from++)
-    {
-        if (from in this &&
-            this[from] === elt)
+    for (; from < len; from++){
+        if (from in this && this[from] === elt)
         return from;
     }
     return -1;
