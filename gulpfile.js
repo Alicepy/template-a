@@ -76,10 +76,9 @@ gulp.task('jshint', function () {
 //     .pipe($.connect.reload());
 //   });
 
-gulp.task('js', ['jshint'],function () {
+gulp.task('js', function () {
     return gulp.src('src/app/home/**/*')
     .pipe(gulp.dest(app.prdPath+'app/home'))
-    // .pipe($.connect.reload());
   });
 
   gulp.task('jscommon', function () {
@@ -97,9 +96,17 @@ gulp.task('js', ['jshint'],function () {
 gulp.task('css',function () {
     return gulp.src(app.srcPath + 'css/**/*.css')
     .pipe($.cssmin())
+    .pipe($.concat('all.css'))
     .pipe(gulp.dest(app.prdPath + 'css'))
     // .pipe($.connect.reload());
 });
+gulp.task('cssInject',function(){
+    gulp.src('./dist/index.html')
+    .pipe($.inject(gulp.src('./dist/css/all.css',{read: false}),{relative: true}))
+    .pipe($.inject(gulp.src('./dist/bower_components/common/**/*.css',{read: false}),{name: 'bower',relative: true}))
+    .pipe(gulp.dest('dist'));
+})
+
 
 // gulp.task('html', ['copyTemplatesToDist', 'copyTplsToDist'], function () {
 gulp.task('html', function () {
@@ -107,7 +114,7 @@ gulp.task('html', function () {
       .pipe(gulp.dest(app.prdPath))
   })
 // 总任务
-gulp.task('build', [ 'css','lib','common','html','js','jscommon','vendor','demo_watch' ,'html2']);
+gulp.task('build', [ 'css','lib','common','html','js','jscommon','vendor','demo_watch' ,'html2','cssInject']);
 
 // 服务
 gulp.task('serve',function () {
@@ -125,10 +132,10 @@ gulp.task('demo_watch', function() {
  gulp.watch('app/bower_components/**/*', ['lib']);
  gulp.watch(app.srcPath + '**/*.html', ['html2']);
  gulp.watch(app.srcPath + 'src/index.html', ['html']);
- gulp.watch(app.srcPath + 'css/**/*.css', ['css']);
- gulp.watch(app.srcPath + '*src/app/common/**/*', ['jscommon']);
+ gulp.watch(app.srcPath + 'src/css/**/*.css', ['css']);
+ gulp.watch(app.srcPath + 'src/app/common/**/*', ['jscommon']);
  gulp.watch(app.srcPath + 'src/app/home/**/*', ['js']);
- gulp.watch(app.srcPath + 'image/**/*', ['image']);
+//  gulp.watch(app.srcPath + 'image/**/*', ['image']);
 })
 
 
