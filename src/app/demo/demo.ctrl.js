@@ -3,7 +3,7 @@
  * @Author: zhangxuelian 
  * @Date: 2018-01-02 14:08:09 
  * @Last Modified by: chenpeiyu
- * @Last Modified time: 2019-03-04 15:25:31
+ * @Last Modified time: 2019-03-06 11:42:31
  **/
 define(['app/common/app'], function (app) {
     app.registerController('demoCtrl', function ($scope, $modal, $couchPotato, Models,modalExt, $rootScope, $location, $state, $sce, subject, $log, $timeout, dateUtil, normalUtil,commonUtil) {
@@ -36,7 +36,7 @@ define(['app/common/app'], function (app) {
         var tableObj = $scope.tableObj = {
             //设置表格
             tableConfig: {
-                // showIndex : true,//显示序号
+                showIndex : true,//显示序号
                 rows:[{
                         'name':'test2',
                         'file':'192.168.12212',

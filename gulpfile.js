@@ -125,14 +125,15 @@ gulp.task('serve',function () {
 });
 
 gulp.task('demo_watch', function() {
-// 监听
- gulp.watch('app/bower_components/**/*', ['vendor']);
- gulp.watch(app.srcPath + '**/*.html', ['htmlTpl']);
- gulp.watch(app.srcPath + 'src/index.html', ['html']);
- gulp.watch(app.srcPath + 'src/css/**/*.css', ['css']);
- gulp.watch(app.srcPath + 'src/app/common/**/*.js', ['jscommon']);
- gulp.watch(app.srcPath + 'src/app/demo/**/*.js', ['js']);
- gulp.watch(app.srcPath + 'src/images/**/*', ['image']);
+    // 监听
+    gulp.watch(app.srcPath + 'bower_components/**/*', ['vendor']);
+    gulp.watch(app.srcPath + '**/*.html', ['htmlTpl']);
+    gulp.watch(app.srcPath + 'css/**/*.css', ['css']);
+    gulp.watch(app.srcPath + 'app/common/**/*.js', ['jscommon']);
+    gulp.watch(app.srcPath + 'app/demo/**/*.js', ['js']);
+    gulp.watch(app.srcPath + 'images/**/*', ['image']);
+    gulp.watch(app.srcPath + 'index.html', ['html']);
+    gulp.watch(app.srcPath + 'app/router/*.js', ['router']);
 })
 
 // 定义default任务
