@@ -3,7 +3,7 @@
  * @Author: zhangxuelian 
  * @Date: 2017-09-13 11:11:28 
  * @Last Modified by: chenpeiyu
- * @Last Modified time: 2019-03-05 14:38:12
+ * @Last Modified time: 2019-03-06 11:20:30
  **/
 define([
 	'app/router/router',
@@ -22,13 +22,10 @@ define([
 		'angularShiroConfigProvider', 
 		'$couchPotatoProvider',
 		function ($stateProvider, $urlRouterProvider, $locationProvider, angularShiroConfigProvider,$couchPotatoProvider) {
+			$urlRouterProvider.otherwise("home");
 			$stateProvider.state('home', {
 				url: "/home",
-				templateUrl: 'app/demo/demo.html',
-				controller: 'demoCtrl',
-				resolve: {
-					dummy: $couchPotatoProvider.resolveDependencies(['app/demo/demo.ctrl.js'])
-				}
+				templateUrl: 'app/demo/home.html',
 			})
 		}]);
 
