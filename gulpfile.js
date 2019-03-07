@@ -85,13 +85,13 @@ gulp.task('jshint', function () {
 
 gulp.task('js', function () {
     return gulp.src('src/app/demo/**/*.js')
-    // .pipe($.uglify())
     .pipe(gulp.dest(app.prdPath+'app/demo'))
 });
 
 gulp.task('jscommon', function () {
     return gulp.src('src/app/common/**/*.js')
-    // .pipe($.uglify())
+    .pipe($.ngAnnotate())
+    .pipe($.uglify())
     .pipe(gulp.dest(app.prdPath+'app/common'))
 });
 
@@ -131,7 +131,7 @@ gulp.task('demo_watch', function() {
     gulp.watch(app.srcPath + 'css/**/*.css', ['css']);
     gulp.watch(app.srcPath + 'app/common/**/*.js', ['jscommon']);
     gulp.watch(app.srcPath + 'app/demo/**/*.js', ['js']);
-    gulp.watch(app.srcPath + 'images/**/*', ['image']);
+    gulp.watch(app.srcPath + 'images/**/*', ['images']);
     gulp.watch(app.srcPath + 'index.html', ['html']);
     gulp.watch(app.srcPath + 'app/router/*.js', ['router']);
 })

@@ -1,8 +1,11 @@
-describe('加法函数的测试', function () {
-    it('1 加 1 应该等于 2', function () {
-        expect(true).toBe(true);
+describe('add function unit test.', function(){
+    it('2 + 3 = 5', function(){
+        var result  = add( 2, 3 );
+        expect( result ).toBe( 5 );
     });
-    it('2 加 2 应该等于 4', function () {
-        expect(true).toBe(true);
-    });
+  
+    it('2 + 3 = 6, this should faild.', function(){
+        var result = add( 2, 3 );
+        expect(result).toBe( 6 );
+    })
 });

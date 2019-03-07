@@ -3,10 +3,11 @@
  * @Author: zhangxuelian 
  * @Date: 2018-01-02 14:08:09 
  * @Last Modified by: chenpeiyu
- * @Last Modified time: 2019-03-06 11:42:31
+ * @Last Modified time: 2019-03-06 16:51:17
  **/
+
 define(['app/common/app'], function (app) {
-    app.registerController('demoCtrl', function ($scope, $modal, $couchPotato, Models,modalExt, $rootScope, $location, $state, $sce, subject, $log, $timeout, dateUtil, normalUtil,commonUtil) {
+    app.registerController('demoCtrl', function ($scope, Models,modalExt, subject,commonUtil) {
         
         var baseConfig=$scope.baseConfig ={
             init:function(){
@@ -29,7 +30,10 @@ define(['app/common/app'], function (app) {
             },
             getTableData:function(){
                 Models.all('interrogate/notification/list').post(baseConfig.params).then(function (ret) {
-                  tableObj.tableConfig.rows = ret.data;
+                    if(commonUtil.checkCode(ret.state)){
+                        tableObj.tableConfig.rows = ret.data;
+                        tableObj.tableConfig.total = ret.page && ret.page.total || 0;
+                    }
                 });
             }
         };
